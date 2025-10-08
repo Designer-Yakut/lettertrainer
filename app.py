@@ -24,7 +24,7 @@
 from flask import Flask, render_template_string, request, send_file
 import io
 import os
-from Font_on_TEMP5_to_GOST import TextRenderer, render_training_letter_images
+from font_on_temp5_to_gost import TextRenderer, render_training_letter_images
 import getpass
 from datetime import datetime
 
@@ -308,7 +308,7 @@ def index():
         # --- Режим обучения (реальные символы) — создаёт training_real.gif ---
         if "training_real" in request.form:
             try:
-                from Font_on_TEMP5_to_GOST import render_training_letter_images
+                from font_on_temp5_to_gost import render_training_letter_images
                 output_dir = request.form.get("output_dir")
                 if not output_dir or output_dir.strip() == "":
                     from datetime import datetime
@@ -438,3 +438,4 @@ if __name__ == "__main__":
     Хост 0.0.0.0 — доступ с других устройств в сети.
     """
     app.run(host="0.0.0.0", port=5000, debug=True)
+

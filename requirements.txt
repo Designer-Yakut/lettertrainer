@@ -1,4 +1,7 @@
-Flask
-matplotlib
-pillow
-numpy
+Flask==2.3.3
+matplotlib==3.8.0
+Pillow==10.0.0
+numpy==1.26.0
+gunicorn==21.2.0
+
+
